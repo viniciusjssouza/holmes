@@ -1,0 +1,39 @@
+PUT holmes_alerts 
+{
+  "settings" : {
+      "number_of_shards" : 1,
+      "analysis": {
+        "analyzer": {
+          "var_analyzer": {
+            "tokenizer": "custom_tokenizer"
+          }
+        },
+        "tokenizer": {
+          "custom_tokenizer": {
+            "type": "pattern",
+            "pattern": "[,\\.\\_\\s\\-]+"
+          }
+        }
+      }
+      
+    },
+    "mappings" : {
+        "properties" : {
+            "alertId" : { "type" : "text", "index": false },
+            "alertName" : { "type" : "text", "analyzer": "var_analyzer" },
+            "alertInstanceId" : { "type" : "text", "index": true, "analyzer": "var_analyzer" },
+            "alertedAt": {
+              "type":  "date",
+              "index": true
+            },
+            "alertState": { "type": "keyword", "index": true },
+            "group": { "type" : "text" },
+            "groupName": { "type" : "text" },
+            "subGroup": { "type" : "text" },
+            "metricValue": { "type": "keyword", "doc_values": true, "index": true },
+            "threshold": { "type": "keyword", "doc_values": false },
+            "reason": { "type": "text", "index": true, "analyzer": "var_analyzer" },            
+            "message": { "type": "text", "index": true, "analyzer": "var_analyzer" }
+        }
+    }
+}

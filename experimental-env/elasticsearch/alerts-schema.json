@@ -1,0 +1,31 @@
+{
+  "metrics": {
+    "alertId": "{{alertId}}",
+    "alertName": "{{alertName}}",
+    "alertInstanceId": "{{alertInstanceId}}",
+    "alertedAt": "{{context.timestamp}}",
+    "group": "{{context.group}}",
+    "groupName": "{{context.alertActionGroupName}}",
+    "subGroup": "{{alertActionSubgroup}}",
+    "metricValue": "{{context.value}}",
+    "threshold": "{{context.threshold}}",
+    "reason": "{{context.reason}}",
+    "alertState": "{{context.alertState}}",
+    "message": "{{context.message}}"
+  },
+
+  "logs": {
+    "alertId": "{{alertId}}",
+    "alertName": "{{alertName}}",
+    "alertInstanceId": "{{alertInstanceId}}",
+    "alertedAt": "{{date}}",
+    "group": "{{alertActionGroup}}",
+    "groupName": "{{alertActionGroupName}}",
+    "subGroup": "{{alertActionSubgroup}}",
+    "metricValue": "",
+    "threshold": "",
+    "reason": "",
+    "alertState": "{{context.alertState}}",
+    "message": "{{tags}}"
+  }
+}
