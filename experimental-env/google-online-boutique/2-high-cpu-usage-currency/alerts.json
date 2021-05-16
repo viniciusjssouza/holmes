@@ -1,0 +1,250 @@
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 10,
+      "relation" : "eq"
+    },
+    "max_score" : null,
+    "hits" : [
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "VnYBa3kBOBSQCviNSLdF",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:11:56.717Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620997916717
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "VHYBa3kBOBSQCviNSLcZ",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-14T13:11:56.696Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620997916696
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "n3YAa3kBOBSQCviNjJ96",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "b11893c0-9ded-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_cpu_usage",
+          "alertInstanceId" : "currency-service, currency-service-659866b696-7dgfw",
+          "alertedAt" : "2021-05-14T13:11:08.664Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620997868664
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "mnb-ankBOBSQCviNq2Fy",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "b11893c0-9ded-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_cpu_usage",
+          "alertInstanceId" : "currency-service, currency-service-659866b696-7dgfw",
+          "alertedAt" : "2021-05-14T13:09:05.521Z",
+          "group" : "currency-service, currency-service-659866b696-7dgfw",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":"34.7%"}""",
+          "threshold" : """{"condition0":["30%"]}""",
+          "reason" : "kubernetes.pod.cpu.usage.node.pct is greater than a threshold of 30% (current value is 34.7%)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1620997745521
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "Nnb8ankBOBSQCviNPRpx",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:06:26.285Z",
+          "group" : "frontend, /frontend/checkout-payment",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":1.2582912}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 1.2582912)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1620997586285
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "NXb8ankBOBSQCviNPRpm",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-14T13:06:26.277Z",
+          "group" : "checkout, /payments",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":1.124073472}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 1.124073472)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1620997586277
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "LHb8ankBOBSQCviNDhXE",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:06:14.337Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620997574337
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "K3b8ankBOBSQCviNDhW9",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-14T13:06:14.331Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620997574331
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "inb7ankBOBSQCviN4Q9_",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:06:02.749Z",
+          "group" : "frontend, /frontend/checkout-payment",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":0.1}""",
+          "threshold" : """{"condition0":[0]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds_count is greater than a threshold of 0 (current value is 0.1)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1620997562749
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "iXb7ankBOBSQCviN4Q97",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-14T13:06:02.745Z",
+          "group" : "checkout, /payments",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":0.2}""",
+          "threshold" : """{"condition0":[0]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds_count is greater than a threshold of 0 (current value is 0.2)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1620997562745
+        ]
+      }
+    ]
+  }
+}
+

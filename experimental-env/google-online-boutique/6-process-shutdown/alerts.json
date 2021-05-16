@@ -1,0 +1,112 @@
+{
+  "took" : 0,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 4,
+      "relation" : "eq"
+    },
+    "max_score" : null,
+    "hits" : [
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "CqJCd3kBOBSQCviNweoa",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-16T22:18:54.059Z",
+          "group" : "checkout, /payments",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":3.087007744}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 3.087007744)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621203534059
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "CaJCd3kBOBSQCviNwOrp",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-16T22:18:54.056Z",
+          "group" : "frontend, /frontend/checkout-payment",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":2.952790016}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 2.952790016)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621203534056
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "UKJCd3kBOBSQCviNmuRv",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "648dbcf0-a433-11eb-bbe7-45bc4de4a110",
+          "alertName" : "microchaos.application_shutdown",
+          "alertInstanceId" : "payment-service, payment-service-7bbf5fb9f-qpfc2",
+          "alertedAt" : "2021-05-16T22:18:44.170Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1621203524170
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "BKJCd3kBOBSQCviNjOLy",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "648dbcf0-a433-11eb-bbe7-45bc4de4a110",
+          "alertName" : "microchaos.application_shutdown",
+          "alertInstanceId" : "payment-service, payment-service-7bbf5fb9f-qpfc2",
+          "alertedAt" : "2021-05-16T22:18:40.752Z",
+          "group" : "payment-service, payment-service-7bbf5fb9f-qpfc2",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":0.1}""",
+          "threshold" : """{"condition0":[0]}""",
+          "reason" : "kubernetes.container.status.restarts is greater than a threshold of 0 (current value is 0.1)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621203520752
+        ]
+      }
+    ]
+  }
+}
+

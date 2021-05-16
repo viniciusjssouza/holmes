@@ -1,0 +1,250 @@
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 26,
+      "relation" : "eq"
+    },
+    "max_score" : null,
+    "hits" : [
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "EHkWa3kBOBSQCviN8ptn",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:35:36.544Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999336544
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "nHkWa3kBOBSQCviNAYAI",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "a4011000-b4b7-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.traffic-spike",
+          "alertInstanceId" : "shipping-service, /shipments",
+          "alertedAt" : "2021-05-14T13:34:34.748Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999274748
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "mXkWa3kBOBSQCviNAIDS",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "a4011000-b4b7-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.traffic-spike",
+          "alertInstanceId" : "email-service, /send-email",
+          "alertedAt" : "2021-05-14T13:34:34.700Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999274700
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "m3kWa3kBOBSQCviNAIDS",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "a4011000-b4b7-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.traffic-spike",
+          "alertInstanceId" : "cart, /user/products",
+          "alertedAt" : "2021-05-14T13:34:34.697Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999274697
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "mnkWa3kBOBSQCviNAIDS",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "a4011000-b4b7-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.traffic-spike",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:34:34.684Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999274684
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "6nkVa3kBOBSQCviN5HwD",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:34:27.329Z",
+          "group" : "frontend, /frontend/checkout-payment",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":1.191182336}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 1.191182336)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1620999267329
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "YHkVa3kBOBSQCviNenF3",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "a4011000-b4b7-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.traffic-spike",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:34:00.304Z",
+          "group" : "frontend, /frontend/checkout-payment",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":10.7}""",
+          "threshold" : """{"condition0":[10]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds_count is greater than a threshold of 10 (current value is 10.7)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1620999240304
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "A3kVa3kBOBSQCviNYW_Y",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-14T13:33:54.007Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999234007
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "vHkUa3kBOBSQCviN_FgU",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "a4011000-b4b7-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.traffic-spike",
+          "alertInstanceId" : "currency-service, /convert",
+          "alertedAt" : "2021-05-14T13:33:27.950Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999207950
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "u3kUa3kBOBSQCviN_FgM",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "a4011000-b4b7-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.traffic-spike",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-14T13:33:27.944Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1620999207944
+        ]
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,250 @@
+{
+  "took" : 290,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 50,
+      "relation" : "eq"
+    },
+    "max_score" : null,
+    "hits" : [
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "mJrtdnkBOBSQCviNKnBo",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-16T20:45:24.960Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1621197924960
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "l5rtdnkBOBSQCviNKnBd",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-16T20:45:24.955Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1621197924955
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "gprsdnkBOBSQCviNKFfu",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-16T20:44:19.053Z",
+          "group" : "checkout, /payments",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":3.087007744}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 3.087007744)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621197859053
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "0ZrrdnkBOBSQCviNs0yz",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-16T20:43:49.042Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1621197829042
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "P5rqdnkBOBSQCviNsjEi",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-16T20:42:43.078Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1621197763078
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "PprqdnkBOBSQCviNsjEi",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-16T20:42:43.073Z",
+          "group" : "",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "",
+          "threshold" : "",
+          "reason" : "",
+          "alertState" : "",
+          "message" : ""
+        },
+        "sort" : [
+          1621197763073
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "eZrqdnkBOBSQCviNJR5E",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-16T20:42:07.043Z",
+          "group" : "checkout, /payments",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":3.087007744}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 3.087007744)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621197727043
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "aprqdnkBOBSQCviNJR4e",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-16T20:42:06.990Z",
+          "group" : "frontend, /frontend/checkout-payment",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":0.3}""",
+          "threshold" : """{"condition0":[0]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds_count is greater than a threshold of 0 (current value is 0.3)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621197726990
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "bJrqdnkBOBSQCviNJR4e",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31350-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.5xx_response",
+          "alertInstanceId" : "checkout, /payments",
+          "alertedAt" : "2021-05-16T20:42:06.985Z",
+          "group" : "checkout, /payments",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":0.3}""",
+          "threshold" : """{"condition0":[0]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds_count is greater than a threshold of 0 (current value is 0.3)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621197726985
+        ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "a5rqdnkBOBSQCviNJR4e",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "4b43f540-a107-11eb-97c3-db0e51afd465",
+          "alertName" : "microchaos.high_latency",
+          "alertInstanceId" : "frontend, /frontend/checkout-payment",
+          "alertedAt" : "2021-05-16T20:42:06.979Z",
+          "group" : "frontend, /frontend/checkout-payment",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : """{"condition0":2.952790016}""",
+          "threshold" : """{"condition0":[1]}""",
+          "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 2.952790016)",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621197726979
+        ]
+      }
+    ]
+  }
+}
+
