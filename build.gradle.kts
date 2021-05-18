@@ -13,6 +13,11 @@ repositories {
 }
 
 dependencies {
+    implementation("org.yaml:snakeyaml:1.25")
+    implementation("ch.qos.logback:logback-classic:1.2.3")
+
+    testImplementation("org.assertj:assertj-core:3.12.2")
+    testImplementation("io.mockk:mockk:1.10.6")
     testImplementation(kotlin("test-junit5"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
@@ -20,6 +25,7 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    testLogging.showStandardStreams = true
 }
 
 tasks.withType<KotlinCompile>() {
