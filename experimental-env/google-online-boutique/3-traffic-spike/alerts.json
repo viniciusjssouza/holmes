@@ -142,8 +142,8 @@
           "group" : "frontend, /frontend/checkout-payment",
           "groupName" : "",
           "subGroup" : "",
-          "metricValue" : """{"condition0":1.191182336}""",
-          "threshold" : """{"condition0":[1]}""",
+          "metricValue" : "{\"condition0\":1.191182336}",
+          "threshold" : "{\"condition0\":[1]}",
           "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 1.191182336)",
           "alertState" : "ALERT",
           "message" : ""
@@ -165,8 +165,8 @@
           "group" : "frontend, /frontend/checkout-payment",
           "groupName" : "",
           "subGroup" : "",
-          "metricValue" : """{"condition0":10.7}""",
-          "threshold" : """{"condition0":[10]}""",
+          "metricValue" : "{\"condition0\":10.7}",
+          "threshold" : "{\"condition0\":[10]}",
           "reason" : "prometheus.metrics.ktor_http_server_requests_seconds_count is greater than a threshold of 10 (current value is 10.7)",
           "alertState" : "ALERT",
           "message" : ""

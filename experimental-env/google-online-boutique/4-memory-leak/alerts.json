@@ -73,8 +73,8 @@
           "group" : "checkout, /payments",
           "groupName" : "",
           "subGroup" : "",
-          "metricValue" : """{"condition0":0.9}""",
-          "threshold" : """{"condition0":[0]}""",
+          "metricValue" : "{\"condition0\":0.9}",
+          "threshold" : "{\"condition0\":[0]}",
           "reason" : "prometheus.metrics.ktor_http_server_requests_seconds_count is greater than a threshold of 0 (current value is 0.9)",
           "alertState" : "ALERT",
           "message" : ""
@@ -96,8 +96,8 @@
           "group" : "currency-service, currency-service-659866b696-7dgfw",
           "groupName" : "",
           "subGroup" : "",
-          "metricValue" : """{"condition0":376680448}""",
-          "threshold" : """{"condition0":[350000000]}""",
+          "metricValue" : "{\"condition0\":376680448}",
+          "threshold" : "{\"condition0\":[350000000]}",
           "reason" : "kubernetes.pod.memory.rss.bytes is greater than a threshold of 350000000 (current value is 376680448)",
           "alertState" : "ALERT",
           "message" : ""

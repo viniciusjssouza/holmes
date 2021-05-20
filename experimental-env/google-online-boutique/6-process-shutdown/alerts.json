@@ -27,8 +27,8 @@
           "group" : "checkout, /payments",
           "groupName" : "",
           "subGroup" : "",
-          "metricValue" : """{"condition0":3.087007744}""",
-          "threshold" : """{"condition0":[1]}""",
+          "metricValue" : "{\"condition0\":3.087007744}",
+          "threshold" : "{\"condition0\":[1]}",
           "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 3.087007744)",
           "alertState" : "ALERT",
           "message" : ""
@@ -50,8 +50,8 @@
           "group" : "frontend, /frontend/checkout-payment",
           "groupName" : "",
           "subGroup" : "",
-          "metricValue" : """{"condition0":2.952790016}""",
-          "threshold" : """{"condition0":[1]}""",
+          "metricValue" : "{\"condition0\":2.952790016}",
+          "threshold" : "{\"condition0\":[1]}",
           "reason" : "prometheus.metrics.ktor_http_server_requests_seconds is greater than a threshold of 1 (current value is 2.952790016)",
           "alertState" : "ALERT",
           "message" : ""
@@ -96,8 +96,8 @@
           "group" : "payment-service, payment-service-7bbf5fb9f-qpfc2",
           "groupName" : "",
           "subGroup" : "",
-          "metricValue" : """{"condition0":0.1}""",
-          "threshold" : """{"condition0":[0]}""",
+          "metricValue" : "{\"condition0\":0.1}",
+          "threshold" : "{\"condition0\":[0]}",
           "reason" : "kubernetes.container.status.restarts is greater than a threshold of 0 (current value is 0.1)",
           "alertState" : "ALERT",
           "message" : ""

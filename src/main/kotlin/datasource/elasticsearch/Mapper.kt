@@ -7,7 +7,7 @@ object Mapper {
     fun mapAlertState(alertState: String): State {
         return when (alertState) {
             "" -> State.RECOVERED
-            "ALERT" -> State.RECOVERED
+            "ALERT" -> State.ALERTED
             else -> throw IllegalArgumentException("Unexpected alert state: '$alertState'")
         }
     }
