@@ -15,6 +15,8 @@ repositories {
 }
 
 dependencies {
+    implementation("it.unibo.tuprolog", "repl-jvm", "0.17.4")
+    implementation("it.unibo.tuprolog", "dsl-theory", "0.17.4")
     implementation("org.yaml:snakeyaml:1.25")
     implementation("ch.qos.logback:logback-classic:1.2.3")
     implementation(kotlin("serialization", version = "1.4.32"))
