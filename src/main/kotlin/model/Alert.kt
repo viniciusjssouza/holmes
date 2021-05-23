@@ -9,5 +9,4 @@ data class Alert(
     val state: State,
     val message: String?
 ) {
-
 }

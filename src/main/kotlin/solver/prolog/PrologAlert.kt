@@ -27,14 +27,14 @@ class PrologAlert(private val alert: Alert) {
 
     private fun highLatencyMapper() =
         FactBuilder("highLatencyInternal")
-            .withExplanation(alert.message ?: "highLatencyInternal")
+            .withExplanation(this.toString())
             .withParameters(serviceNameParam(), endpointParam())
             .withTimeWindow(alert.timestamp)
             .build()
 
     private fun internalServerErrMapper() =
         FactBuilder("internalServerErrAlert")
-            .withExplanation(alert.message ?: "internalServerErrAlert")
+            .withExplanation(this.toString())
             .withParameters(serviceNameParam(), endpointParam())
             .withTimeWindow(alert.timestamp)
             .build()
@@ -42,4 +42,12 @@ class PrologAlert(private val alert: Alert) {
     private fun serviceNameParam() = alert.subjects[0]
 
     private fun endpointParam() = "'${alert.subjects[1]}'"
+
+    override fun toString(): String {
+        val endpointInfo = alert.subjects.getOrNull(1)?.let {
+            ", endpoint \"${alert.subjects[1]}\""
+        } ?: ""
+        return "${alert.name}, on service \"${serviceNameParam()}\"$endpointInfo at ${alert.timestamp}"
+    }
+
 }

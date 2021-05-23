@@ -8,8 +8,10 @@ import solver.SolverException
 import solver.prolog.PrologSolver
 import java.io.File
 import java.io.FileInputStream
+import java.lang.Exception
 import java.time.Instant
 import java.time.LocalDateTime
+import kotlin.system.exitProcess
 
 val logger = loggerFor("Main")
 const val ONLINE_BOUTIQUE_MICROCHAOS_CONFIG =
@@ -19,21 +21,47 @@ const val PROLOG_KNOWLEDGE_BASE = "./prolog/holmes.pl"
 
 fun main(args: Array<String>) {
     ConsoleUI.printSplash()
+
+    val solver = loadKnowledgeBase()
+    runDiagnosisLoop(solver, args)
+}
+
+fun runDiagnosisLoop(solver: PrologSolver, args: Array<String>) {
     val alerts = readAlerts()
+    solver.addAlerts(alerts)
+    if (args.isNotEmpty()) {
+        val query = ConsoleUI.parseQuery(args.joinToString(" "))
+        solveQuery(solver, query)
+        return
+    }
+    while(true) {
+        val query = ConsoleUI.readQuery()
+        solveQuery(solver, query)
+    }
+}
+
+fun solveQuery(solver: PrologSolver, query: String) {
+    try {
+        logger.debug("Query: $query")
+        val solutions = solver.solve(query)
+        ConsoleUI.printSolutions(solutions)
+    } catch (err: Exception) {
+        logger.error("Error while solving query '$query'", err)
+        exitProcess(1)
+    }
+}
+
+fun loadKnowledgeBase(): PrologSolver {
     val topology = readTopology()
     val solver = PrologSolver()
     logger.debug("Topology loaded:\n${topology.toString().prependIndent("\t")}")
     try {
-        solver.addAlerts(alerts)
         solver.addTopology(topology)
         solver.loadTheory(File(PROLOG_KNOWLEDGE_BASE))
-        val alertAt = Instant.parse("2021-05-14T12:25:02.370Z").epochSecond
-        val query = "internalServerErr(frontend, '/frontend/checkout-payment', $alertAt, CAUSE)."
-        logger.debug("Query: $query")
-        val solutions = solver.solve(query)
-        ConsoleUI.printSolutions(solutions)
+        return solver;
     } catch (err: SolverException) {
-        println(err.message)
+        logger.error("Error while loading theories", err)
+        exitProcess(1)
     }
 }
 
