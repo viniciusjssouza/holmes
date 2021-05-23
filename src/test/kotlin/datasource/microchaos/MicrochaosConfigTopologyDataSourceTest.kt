@@ -24,8 +24,8 @@ internal class MicrochaosConfigTopologyDataSourceTest {
                 "recommendation-service"
             )
         )
-        assertThat(topology.serviceByName("frontend")?.port).isEqualTo(8080)
-        assertThat(topology.serviceByName("recommendation-service")?.port).isEqualTo(8088)
+        assertThat(topology.serviceByName("frontend").port).isEqualTo(8080)
+        assertThat(topology.serviceByName("recommendation-service").port).isEqualTo(8088)
     }
 
     @Test
@@ -33,7 +33,7 @@ internal class MicrochaosConfigTopologyDataSourceTest {
         val topology = onlineBoutiqueTopology()
         val checkoutSvc = topology.serviceByName("checkout")
 
-        assertThat(checkoutSvc.downstreams).containsAll(
+        assertThat(checkoutSvc.downstreams.map { it.to.first() }).containsAll(
             listOf(
                 "currency-service",
                 "payment-service",

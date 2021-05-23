@@ -1,8 +1,7 @@
 package datasource.microchaos
 
 import datasource.TopologyDataSource
-import model.Service
-import model.Topology
+import model.*
 import org.yaml.snakeyaml.Yaml
 import java.io.File
 import java.io.InputStream
@@ -21,16 +20,17 @@ class MicrochaosConfigTopologyDataSource(private val input: InputStream) : Topol
 
     private fun readService(yaml: Map<*, *>): Service {
         val serviceYaml = yaml["service"] as Map<*, *>
-        val downstreams = this.extractDownstreams(serviceYaml)
+        val serviceName = serviceYaml["name"] as String
+        val downstreams = this.extractDownstreams(serviceName, serviceYaml)
         val service = Service(
-            name = serviceYaml["name"] as String,
+            name = serviceName,
             port = serviceYaml["port"].toString().toInt(),
             downstreams = downstreams,
         )
         return service
     }
 
-    private fun extractDownstreams(serviceYaml: Map<*, *>): Set<String> {
+    private fun extractDownstreams(service: String, serviceYaml: Map<*, *>): Set<Request> {
         require(serviceYaml["endpoints"] is List<*>) { "Endpoints is not a list" }
         return (serviceYaml["endpoints"] as List<*>)
             .filterIsInstance<Map<*, *>>()
@@ -38,19 +38,25 @@ class MicrochaosConfigTopologyDataSource(private val input: InputStream) : Topol
                 require(it["behavior"] is Map<*, *>) { "Invalid behavior property" }
                 val behavior = it["behavior"] as Map<*, *>
                 require(behavior["commands"] is List<*>) { "Invalid list of commands" }
-                this.downstreamsFromCommands(behavior["commands"] as List<*>)
+                this.downstreamsFromCommands(service, behavior["commands"] as List<*>)
             }.toHashSet()
 
     }
 
-    private fun downstreamsFromCommands(commands: List<*>): Set<String> {
+    private fun downstreamsFromCommands(serviceName: String, commands: List<*>): Set<Request> {
         return commands
             .filterIsInstance<Map<String, Map<String, String>>>()
             .filter { it.containsKey("request") }
             .map {
                 val requestFields = it["request"] as Map<String, String>
                 val url = Url(requestFields.getValue("target").toString())
-                url.extractServiceName()
+                Request(
+                    from = serviceName,
+                    to = listOf(url.extractServiceName()),
+                    synchronization = Synchronization.SYNC,
+                    protocol = Protocol.REST_HTTP,
+                    endpoint = url.extractEndpoint(),
+                )
             }.toHashSet()
 
     }

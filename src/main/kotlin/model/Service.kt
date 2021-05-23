@@ -1,6 +1,6 @@
 package model
 
-class Service(val name: String, val port: Int, val downstreams: Set<String> = emptySet()) {
+class Service(val name: String, val port: Int, val downstreams: Set<Request> = emptySet()) {
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -19,7 +19,7 @@ class Service(val name: String, val port: Int, val downstreams: Set<String> = em
 
     override fun toString(): String {
         return "$name(port=$port)\n".plus(downstreams.joinToString("\n") {
-            "  ---> $it"
+            "  $it"
         })
     }
 

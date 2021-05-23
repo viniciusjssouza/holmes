@@ -12,9 +12,13 @@ enum class Protocol {
 }
 
 data class Request(
-    val from: Service,
-    val to: List<Service>,
+    val from: String,
+    val to: List<String>,
     val synchronization: Synchronization,
-    val protocol: Protocol
+    val protocol: Protocol,
+    val endpoint: String,
 ) {
+    override fun toString(): String {
+        return "--> $to($endpoint)"
+    }
 }

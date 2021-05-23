@@ -10,4 +10,10 @@ internal class UrlTest {
         assertThat(Url("http://product-catalog:8081/products").extractServiceName())
             .isEqualTo("product-catalog")
     }
+
+    @Test
+    fun `extractEndpoint`() {
+        assertThat(Url("http://cart:8087/user/products").extractEndpoint())
+            .isEqualTo("/user/products")
+    }
 }
