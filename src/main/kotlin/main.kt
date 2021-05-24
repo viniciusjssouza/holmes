@@ -16,7 +16,7 @@ import kotlin.system.exitProcess
 val logger = loggerFor("Main")
 const val ONLINE_BOUTIQUE_MICROCHAOS_CONFIG =
     "experimental-env/google-online-boutique/online-boutique.yml"
-const val PROLOG_KNOWLEDGE_BASE = "./prolog/holmes.pl"
+const val PROLOG_KNOWLEDGE_BASE = "./prolog/knowledge-base.pl"
 
 
 fun main(args: Array<String>) {
@@ -68,7 +68,7 @@ fun loadKnowledgeBase(): PrologSolver {
 fun readAlerts(): List<Alert> {
     val alertFiles = AlertFiles.collect("./")
     val from = LocalDateTime.parse("2021-05-14T00:00:00")
-    val to = LocalDateTime.parse("2021-05-14T12:27:00")
+    val to = LocalDateTime.parse("2022-05-14T12:27:00")
     return ESAlertsDataSource(alertFiles.toTypedArray()).readAlerts(from, to)
 }
 

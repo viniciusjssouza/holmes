@@ -9,10 +9,10 @@ class PrologAlert(private val alert: Alert) {
     private val alertsToRules = mapOf<String, AlertMapper>(
         "microchaos.5xx_response" to ::internalServerErrMapper,
         "microchaos.high_latency" to ::highLatencyMapper,
-//        "microchaos.traffic-spike" to "trafficSpike",
-//        "microchaos.high_cpu_usage" to "highCpuUsage",
-//        "microchaos.high_memory_usage" to "highMemoryUsage",
-//        "microchaos.application_shutdown" to "terminatedProcess",
+        "microchaos.high_cpu_usage" to ::highCpuUsageMapper,
+        "microchaos.high_memory_usage" to ::highMemoryUsageMapper,
+        "microchaos.traffic-spike" to ::trafficSpikeMapper,
+        "microchaos.application_shutdown" to ::processTerminatedMapper,
     )
 
     fun toFact(): String {
@@ -24,6 +24,34 @@ class PrologAlert(private val alert: Alert) {
             }
         } ?: throw IllegalStateException("Unsupported alert: '${alert.name}'")
     }
+
+    private fun processTerminatedMapper() =
+        FactBuilder("processTerminated")
+            .withExplanation(this.toString())
+            .withParameters(serviceNameParam())
+            .withTimeWindow(alert.timestamp)
+            .build()
+
+    private fun trafficSpikeMapper() =
+        FactBuilder("trafficSpike")
+            .withExplanation(this.toString())
+            .withParameters(serviceNameParam())
+            .withTimeWindow(alert.timestamp)
+            .build()
+
+    private fun highCpuUsageMapper() =
+        FactBuilder("highCpuUsage")
+            .withExplanation(this.toString())
+            .withParameters(serviceNameParam())
+            .withTimeWindow(alert.timestamp)
+            .build()
+
+    private fun highMemoryUsageMapper() =
+        FactBuilder("highMemoryUsage")
+            .withExplanation(this.toString())
+            .withParameters(serviceNameParam())
+            .withTimeWindow(alert.timestamp)
+            .build()
 
     private fun highLatencyMapper() =
         FactBuilder("highLatencyInternal")
