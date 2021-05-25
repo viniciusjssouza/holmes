@@ -16,10 +16,11 @@ internal class OnlineBoutiqueIT {
         "internalServerErr(frontend, '/frontend/checkout-payment', 2021-05-14T12:25:02.370Z, CAUSE)."
         )
         val solutions = studyCase.solveQuery(query)
-        println(solutions)
+        println(solutions.joinToString("\n"))
         assertThat(solutions.filter { sol ->
             sol.contains("CAUSE = 'microchaos.high_latency, on service \"cart\"")
         }).isNotEmpty
+        assertThat(solutions.size).isEqualTo(1)
     }
 
     @Test
@@ -28,10 +29,11 @@ internal class OnlineBoutiqueIT {
         "highLatency(frontend, '/frontend/checkout-payment', 2021-05-14T13:06:26.285Z, CAUSE)."
         )
         val solutions = studyCase.solveQuery(query)
-        println(solutions)
+        println(solutions.joinToString("\n"))
         assertThat(solutions.filter { sol ->
             sol.contains("CAUSE = 'microchaos.high_cpu_usage, on service \"currency-service\"")
         }).isNotEmpty
+        assertThat(solutions.size).isEqualTo(1)
     }
 
     @Test
@@ -40,10 +42,11 @@ internal class OnlineBoutiqueIT {
         "highLatency(frontend, '/frontend/checkout-payment', 2021-05-14T13:33:54.007Z, CAUSE)."
         )
         val solutions = studyCase.solveQuery(query)
-        println(solutions)
+        println(solutions.joinToString("\n"))
         assertThat(solutions.filter { sol ->
             sol.contains("CAUSE = 'microchaos.traffic-spike, on service \"frontend\"")
         }).isNotEmpty
+        assertThat(solutions.size).isEqualTo(1)
     }
 
     @Test
@@ -52,10 +55,11 @@ internal class OnlineBoutiqueIT {
         "internalServerErr(checkout, '/payments', 2021-05-16T16:40:44.061Z, CAUSE)."
         )
         val solutions = studyCase.solveQuery(query)
-        println(solutions)
+        println(solutions.joinToString("\n"))
         assertThat(solutions.filter { sol ->
             sol.contains("CAUSE = 'microchaos.high_memory_usage, on service \"currency-service\"")
         }).isNotEmpty
+        assertThat(solutions.size).isEqualTo(1)
     }
 
     @Test
@@ -64,10 +68,11 @@ internal class OnlineBoutiqueIT {
             "highLatency(frontend, '/frontend/checkout-payment', 2021-05-16T20:42:06.979Z, CAUSE)."
         )
         val solutions = studyCase.solveQuery(query)
-        println(solutions)
+        println(solutions.joinToString("\n"))
         assertThat(solutions.filter { sol ->
             sol.contains("CAUSE = 'microchaos.network_failure, on service \"payment-service\"")
         }).isNotEmpty
+        assertThat(solutions.size).isEqualTo(1)
     }
 
     @Test
@@ -76,9 +81,10 @@ internal class OnlineBoutiqueIT {
             "highLatency(frontend, '/frontend/checkout-payment', 2021-05-16T22:18:54.056Z, CAUSE)."
         )
         val solutions = studyCase.solveQuery(query)
-        println(solutions)
+        println(solutions.joinToString("\n"))
         assertThat(solutions.filter { sol ->
             sol.contains(" CAUSE = 'microchaos.application_shutdown, on service \"payment-service\"")
         }).isNotEmpty
+        assertThat(solutions.size).isEqualTo(1)
     }
 }

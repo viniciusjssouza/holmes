@@ -69,7 +69,7 @@ class PrologAlert(private val alert: Alert) {
             .build()
 
     private fun internalServerErrMapper() =
-        FactBuilder("internalServerErrAlert")
+        FactBuilder("functionalFailure")
             .withExplanation(this.toString())
             .withParameters(serviceNameParam(), endpointParam())
             .withTimeWindow(alert.timestamp)

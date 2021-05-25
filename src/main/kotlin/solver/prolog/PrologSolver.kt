@@ -38,13 +38,15 @@ class PrologSolver(private val timeout: Duration = Duration.ofSeconds(10)) {
         theory += Theory.parse(facts)
     }
 
-    fun solve(query: String): List<String> {
+    fun solve(query: String): Set<String> {
         val solver = getSolver();
         val goal = Struct.parse(query, solver.operators)
         val solutions = solver.solveList(goal, this.timeout.toMillis())
         return solutions.map { sol ->
             sol.format(SolutionFormatter.withOperators(solver.operators))
         }
+            .filterNot { sol -> sol == "no." }
+            .toHashSet()
     }
 
     fun loadTheory(file: File): Theory {

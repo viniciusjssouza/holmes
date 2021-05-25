@@ -30,7 +30,7 @@ class StudyCase(
         solver.addAlerts(alerts)
     }
 
-    fun solveQuery(query: String): List<String> {
+    fun solveQuery(query: String): Set<String> {
         try {
             logger.debug("Query: $query")
             return solver.solve(query)

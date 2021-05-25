@@ -52,7 +52,7 @@ internal class ESAlertsDataSourceTest {
         )
 
         checkOrder(alerts)
-        assertThat(alerts.size).isEqualTo(4)
+        assertThat(alerts.size).isEqualTo(5)
         assertThat(alerts.map { it.name }.toSet()).contains(
             "microchaos.5xx_response",
             "microchaos.high_memory_usage",
