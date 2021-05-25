@@ -11,6 +11,7 @@ class PrologAlert(private val alert: Alert) {
         "microchaos.high_latency" to ::highLatencyMapper,
         "microchaos.high_cpu_usage" to ::highCpuUsageMapper,
         "microchaos.high_memory_usage" to ::highMemoryUsageMapper,
+        "microchaos.network_failure" to ::networkFailureMapper,
         "microchaos.traffic-spike" to ::trafficSpikeMapper,
         "microchaos.application_shutdown" to ::processTerminatedMapper,
     )
@@ -24,6 +25,13 @@ class PrologAlert(private val alert: Alert) {
             }
         } ?: throw IllegalStateException("Unsupported alert: '${alert.name}'")
     }
+
+    private fun networkFailureMapper() =
+        FactBuilder("networkFailure")
+            .withExplanation(this.toString())
+            .withParameters(serviceNameParam())
+            .withTimeWindow(alert.timestamp)
+            .build()
 
     private fun processTerminatedMapper() =
         FactBuilder("processTerminated")
@@ -40,7 +48,7 @@ class PrologAlert(private val alert: Alert) {
             .build()
 
     private fun highCpuUsageMapper() =
-        FactBuilder("highCpuUsage")
+        FactBuilder("highCpuUsageAlert")
             .withExplanation(this.toString())
             .withParameters(serviceNameParam())
             .withTimeWindow(alert.timestamp)

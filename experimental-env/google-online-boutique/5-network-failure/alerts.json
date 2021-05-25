@@ -243,6 +243,29 @@
         "sort" : [
           1621197726979
         ]
+      },
+      {
+        "_index" : "holmes_alerts",
+        "_type" : "_doc",
+        "_id" : "bJrqdnkBOBSQCWiNJR4e",
+        "_score" : null,
+        "_source" : {
+          "alertId" : "0dd31320-b3ed-11eb-ad64-7dac22047915",
+          "alertName" : "microchaos.network_failure",
+          "alertInstanceId" : "payment-service, /payments",
+          "alertedAt" : "2021-05-16T20:39:58.772Z",
+          "group" : "checkout, /payments",
+          "groupName" : "",
+          "subGroup" : "",
+          "metricValue" : "{\"condition0\":0}",
+          "threshold" : "{\"condition0\":[0]}",
+          "reason" : "inbound traffic is equal to 0",
+          "alertState" : "ALERT",
+          "message" : ""
+        },
+        "sort" : [
+          1621197726985
+        ]
       }
     ]
   }
